@@ -29,7 +29,7 @@
   },
   "overrides": [
     {
-      "files": ["App.tsx"],
+      "files": ["App.tsx", "./src/app/*"],
       "rules": { "import/no-default-export": "off" }
     }
   ]
