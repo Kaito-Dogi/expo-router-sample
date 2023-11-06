@@ -1,13 +1,11 @@
 import { StyleSheet, TextStyle } from "react-native";
 
 import { colors } from "@/styles/colors";
+import { dimens } from "@/styles/dimens";
 
-/**
- * @package
- */
-export type ButtonType = "medium" | "large";
+import { ButtonType } from "./Button";
 
-const buttonStyles: {
+const textStyles: {
   [key in ButtonType]: TextStyle;
 } = {
   medium: {
@@ -25,4 +23,13 @@ const buttonStyles: {
 /**
  * @package
  */
-export const styles = StyleSheet.create(buttonStyles);
+export const styles = StyleSheet.create({
+  ...textStyles,
+  container: {
+    justifyContent: "center",
+    alignItems: "center",
+    alignSelf: "stretch",
+    padding: dimens.S,
+    backgroundColor: colors.PRIMARY,
+  },
+});

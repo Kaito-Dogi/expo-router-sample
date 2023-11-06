@@ -1,11 +1,12 @@
 import { useMemo } from "react";
 
-import { ButtonType, styles } from "./Button.styles";
+import { ButtonType } from "./Button";
+import { styles } from "./Button.styles";
 
 /**
  * @package
  */
-export const useStyles = (type: ButtonType) => {
+export const useTextStyle = (type: ButtonType) => {
   return useMemo(() => {
     switch (type) {
       case "medium":

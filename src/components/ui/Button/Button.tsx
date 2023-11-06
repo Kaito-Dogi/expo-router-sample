@@ -1,8 +1,13 @@
 import { FC } from "react";
-import { Pressable } from "react-native";
+import { Pressable, Text } from "react-native";
 
-import { useStyles } from "./Button.hooks";
-import { ButtonType } from "./Button.styles";
+import { useTextStyle } from "./Button.hooks";
+import { styles } from "./Button.styles";
+
+/**
+ * @package
+ */
+export type ButtonType = "medium" | "large";
 
 type Props = {
   text: string;
@@ -13,6 +18,10 @@ type Props = {
  * @package
  */
 export const Button: FC<Props> = ({ text, type }) => {
-  const style = useStyles(type);
-  return <Pressable style={style}>{text}</Pressable>;
+  const textStyle = useTextStyle(type);
+  return (
+    <Pressable style={styles.container}>
+      <Text style={textStyle}>{text}</Text>
+    </Pressable>
+  );
 };
