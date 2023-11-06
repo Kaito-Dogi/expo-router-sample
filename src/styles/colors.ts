@@ -1,24 +1,20 @@
 type Colors =
   | "PRIMARY"
   | "ON_PRIMARY"
-  | "SECONDARY"
-  | "ON_SECONDARY"
   | "BACKGROUND"
   | "ON_BACKGROUND"
   | "SURFACE"
   | "ON_SURFACE"
-  | "ERROR";
+  | "DISABLED";
 
 export const colors: {
   [key in Colors]: `#${string}`;
 } = {
-  PRIMARY: "#fff",
+  PRIMARY: "#60dafb",
   ON_PRIMARY: "#222",
-  SECONDARY: "#fff",
-  ON_SECONDARY: "#222",
-  BACKGROUND: "#fff",
+  BACKGROUND: "#f9f9f9",
   ON_BACKGROUND: "#222",
   SURFACE: "#fff",
   ON_SURFACE: "#222",
-  ERROR: "#f00",
+  DISABLED: "#a9a9a9",
 };
