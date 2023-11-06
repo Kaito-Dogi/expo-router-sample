@@ -25,7 +25,7 @@ export const {{ inputs.name | pascal }}: FC<Props> = ({}) => {
 };
 ```
 
-# `{{ inputs.name | pascal }}/styles.ts`
+# `{{ inputs.name | pascal }}/{{ inputs.name | pascal }}.styles.ts`
 
 ```tsx
 import { StyleSheet } from "react-native";
