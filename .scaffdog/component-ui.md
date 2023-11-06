@@ -1,6 +1,6 @@
 ---
-name: "component"
-root: "src/components/"
+name: "component-ui"
+root: "src/components/ui/"
 output: "./"
 ignore: []
 questions:
