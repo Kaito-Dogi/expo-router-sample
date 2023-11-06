@@ -1,7 +1,7 @@
 import { FC } from "react";
 import { View } from "react-native";
 
-import { styles } from "./styles";
+import { styles } from "./Divider.styles";
 
 /**
  * @package
