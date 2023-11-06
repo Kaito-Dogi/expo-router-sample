@@ -2,10 +2,7 @@ import { StyleSheet, TextStyle } from "react-native";
 
 import { colors } from "@/styles/colors";
 
-/**
- * @package
- */
-export type TextType = "medium" | "bold" | "small" | "large" | "title";
+import { TextType } from "./Text";
 
 const textStyles: {
   [key in TextType]: TextStyle;
