@@ -1,4 +1,4 @@
-type Colors =
+type Color =
   | "PRIMARY"
   | "ON_PRIMARY"
   | "BACKGROUND"
@@ -8,7 +8,7 @@ type Colors =
   | "DISABLED";
 
 export const colors: {
-  [key in Colors]: `#${string}`;
+  [key in Color]: `#${string}`;
 } = {
   PRIMARY: "#60dafb",
   ON_PRIMARY: "#222",
