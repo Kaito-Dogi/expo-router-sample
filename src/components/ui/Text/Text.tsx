@@ -9,25 +9,18 @@ type Props = {
 };
 
 const getStyle = (type: TextType): TextStyle => {
-  let style: TextStyle;
   switch (type) {
     case "medium":
-      style = styles.medium;
-      break;
+      return styles.medium;
     case "bold":
-      style = styles.bold;
-      break;
+      return styles.bold;
     case "small":
-      style = styles.small;
-      break;
+      return styles.small;
     case "large":
-      style = styles.large;
-      break;
+      return styles.large;
     case "title":
-      style = styles.title;
-      break;
+      return styles.title;
   }
-  return style;
 };
 
 /**

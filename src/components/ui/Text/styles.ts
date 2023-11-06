@@ -7,7 +7,7 @@ import { colors } from "@/styles/colors";
  */
 export type TextType = "medium" | "bold" | "small" | "large" | "title";
 
-const buttonStyles: {
+const textStyles: {
   [key in TextType]: TextStyle;
 } = {
   medium: {
@@ -41,4 +41,4 @@ const buttonStyles: {
 /**
  * @package
  */
-export const styles = StyleSheet.create(buttonStyles);
+export const styles = StyleSheet.create(textStyles);
