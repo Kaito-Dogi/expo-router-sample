@@ -17,9 +17,7 @@ import { styles } from "./styles";
 
 type Props = {};
 
-/**
- * @package
- */
+/** @package */
 export const {{ inputs.name | pascal }}: FC<Props> = ({}) => {
   return <View style={styles.container} />;
 };
@@ -30,9 +28,7 @@ export const {{ inputs.name | pascal }}: FC<Props> = ({}) => {
 ```tsx
 import { StyleSheet } from "react-native";
 
-/**
- * @package
- */
+/** @package */
 export const styles = StyleSheet.create({
   container: {},
 });
