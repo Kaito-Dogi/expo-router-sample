@@ -7,13 +7,13 @@ import { Size } from "./Button.types";
 
 type Props = {
   text: string;
-  size: Size;
   onClick: () => void;
+  size?: Size;
   icon?: ReactNode;
 };
 
 /** @package */
-export const Button: FC<Props> = ({ icon, onClick, size, text }) => {
+export const Button: FC<Props> = ({ icon, onClick, size = "m", text }) => {
   const textStyle = useTextStyle(size);
   return (
     <Pressable onPress={onClick} style={styles.container}>
