@@ -1,4 +1,3 @@
-import { type } from "os";
 import { useMemo } from "react";
 import { TextStyle } from "react-native";
 
@@ -41,14 +40,16 @@ export const useStyle = (
   size: FontSize,
   textAlign: TextAlign
 ): TextStyle => {
-  return useMemo(() => {
-    const textColor = useTextColor(color);
-    const fontSize = useTextSize(size);
+  const textColor = useTextColor(color);
+  const fontSize = useTextSize(size);
+
+  const style = useMemo(() => {
     return {
       color: textColor,
       fontWeight,
       fontSize,
       textAlign,
     };
-  }, [type]);
+  }, [color, fontWeight, size, textAlign]);
+  return style;
 };
