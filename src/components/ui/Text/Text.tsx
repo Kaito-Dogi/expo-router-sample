@@ -1,9 +1,11 @@
 import { FC, ReactNode } from "react";
 import { Text as RNText } from "react-native";
 
+import { FontSize } from "@/styles/fontSize";
+
 import { useStyle } from "./Text.hooks";
 import { styles } from "./Text.styles";
-import { FontSize, FontWeight, TextAlign, TextColor } from "./Text.types";
+import { FontWeight, TextAlign, TextColor } from "./Text.types";
 
 type Props = {
   children: ReactNode;

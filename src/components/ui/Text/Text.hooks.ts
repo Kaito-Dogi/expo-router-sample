@@ -2,8 +2,9 @@ import { useMemo } from "react";
 import { TextStyle } from "react-native";
 
 import { colors } from "@/styles/colors";
+import { FontSize, fontSize } from "@/styles/fontSize";
 
-import { FontSize, FontWeight, TextAlign, TextColor } from "./Text.types";
+import { FontWeight, TextAlign, TextColor } from "./Text.types";
 
 const useTextColor = (color: TextColor): `#${string}` => {
   return useMemo(() => {
@@ -19,14 +20,16 @@ const useTextColor = (color: TextColor): `#${string}` => {
 const useTextSize = (size: FontSize): number => {
   return useMemo(() => {
     switch (size) {
+      case "xs":
+        return fontSize.xs;
       case "s":
-        return 12;
+        return fontSize.s;
       case "m":
-        return 14;
+        return fontSize.m;
       case "l":
-        return 18;
+        return fontSize.l;
       case "xl":
-        return 24;
+        return fontSize.xl;
     }
   }, [size]);
 };
