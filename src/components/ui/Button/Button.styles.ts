@@ -10,12 +10,12 @@ const textStyles: {
 } = {
   medium: {
     alignSelf: "stretch",
-    color: colors.ON_SURFACE,
+    color: colors.onSurface,
     fontSize: 14,
   },
   large: {
     alignSelf: "stretch",
-    color: colors.ON_SURFACE,
+    color: colors.onSurface,
     fontSize: 18,
   },
 };
@@ -29,7 +29,7 @@ export const styles = StyleSheet.create({
     justifyContent: "center",
     alignItems: "center",
     alignSelf: "stretch",
-    padding: dimens.S,
-    backgroundColor: colors.PRIMARY,
+    padding: dimens.s,
+    backgroundColor: colors.primary,
   },
 });

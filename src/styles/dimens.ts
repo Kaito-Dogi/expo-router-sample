@@ -1,11 +1,11 @@
-type Dimen = "XS" | "S" | "M" | "L" | "XL";
+type Dimen = "xs" | "s" | "m" | "l" | "xl";
 
 export const dimens: {
   [key in Dimen]: number;
 } = {
-  XS: 4,
-  S: 8,
-  M: 16,
-  L: 24,
-  XL: 32,
+  xs: 4,
+  s: 8,
+  m: 16,
+  l: 24,
+  xl: 32,
 };

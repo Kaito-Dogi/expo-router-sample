@@ -10,7 +10,7 @@ export const styles = StyleSheet.create({
     alignSelf: "stretch",
     height: 0,
     borderWidth: 1,
-    borderColor: colors.DISABLED,
+    borderColor: colors.disabled,
     borderStyle: "dashed",
   },
 });

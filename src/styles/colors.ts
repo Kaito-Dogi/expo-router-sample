@@ -1,20 +1,20 @@
 type Color =
-  | "PRIMARY"
-  | "ON_PRIMARY"
-  | "BACKGROUND"
-  | "ON_BACKGROUND"
-  | "SURFACE"
-  | "ON_SURFACE"
-  | "DISABLED";
+  | "primary"
+  | "onPrimary"
+  | "background"
+  | "onBackground"
+  | "surface"
+  | "onSurface"
+  | "disabled";
 
 export const colors: {
   [key in Color]: `#${string}`;
 } = {
-  PRIMARY: "#60dafb",
-  ON_PRIMARY: "#222",
-  BACKGROUND: "#f9f9f9",
-  ON_BACKGROUND: "#222",
-  SURFACE: "#fff",
-  ON_SURFACE: "#222",
-  DISABLED: "#a9a9a9",
+  primary: "#60dafb",
+  onPrimary: "#222",
+  background: "#f9f9f9",
+  onBackground: "#222",
+  surface: "#fff",
+  onSurface: "#222",
+  disabled: "#a9a9a9",
 };
