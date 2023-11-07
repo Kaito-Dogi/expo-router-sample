@@ -1,25 +1,54 @@
+import { type } from "os";
 import { useMemo } from "react";
 import { TextStyle } from "react-native";
 
-import { TextType } from "./Text";
-import { styles } from "./Text.styles";
+import { colors } from "@/styles/colors";
+
+import { FontSize, FontWeight, TextAlign, TextColor } from "./Text.types";
+
+const useTextColor = (color: TextColor): `#${string}` => {
+  return useMemo(() => {
+    switch (color) {
+      case "onSurface":
+        return colors.onSurface;
+      case "disabled":
+        return colors.disabled;
+    }
+  }, [color]);
+};
+
+const useTextSize = (size: FontSize): number => {
+  return useMemo(() => {
+    switch (size) {
+      case "s":
+        return 12;
+      case "m":
+        return 14;
+      case "l":
+        return 18;
+      case "xl":
+        return 24;
+    }
+  }, [size]);
+};
 
 /**
  * @package
  */
-export const useStyle = (type: TextType): TextStyle => {
+export const useStyle = (
+  color: TextColor,
+  fontWeight: FontWeight,
+  size: FontSize,
+  textAlign: TextAlign
+): TextStyle => {
   return useMemo(() => {
-    switch (type) {
-      case "medium":
-        return styles.medium;
-      case "bold":
-        return styles.bold;
-      case "small":
-        return styles.small;
-      case "large":
-        return styles.large;
-      case "title":
-        return styles.title;
-    }
+    const textColor = useTextColor(color);
+    const fontSize = useTextSize(size);
+    return {
+      color: textColor,
+      fontWeight,
+      fontSize,
+      textAlign,
+    };
   }, [type]);
 };

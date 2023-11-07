@@ -1,22 +1,26 @@
-import { FC } from "react";
+import { FC, ReactNode } from "react";
 import { Text as RNText } from "react-native";
 
 import { useStyle } from "./Text.hooks";
-
-/**
- * @package
- */
-export type TextType = "medium" | "bold" | "small" | "large" | "title";
+import { styles } from "./Text.styles";
+import { FontSize, FontWeight, TextAlign, TextColor } from "./Text.types";
 
 type Props = {
-  text: string;
-  type: TextType;
+  color: TextColor;
+  size: FontSize;
+  textAlign: TextAlign;
+  fontWeight: FontWeight;
+  children: ReactNode;
 };
 
-/**
- * @package
- */
-export const Text: FC<Props> = ({ text, type }) => {
-  const style = useStyle(type);
-  return <RNText style={style}>{text}</RNText>;
+/** @package */
+export const Text: FC<Props> = ({
+  children,
+  color,
+  fontWeight,
+  size,
+  textAlign,
+}) => {
+  const style = useStyle(color, fontWeight, size, textAlign);
+  return <RNText style={[style, styles.text]}>{children}</RNText>;
 };
