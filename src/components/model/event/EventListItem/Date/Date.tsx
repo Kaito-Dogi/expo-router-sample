@@ -10,17 +10,19 @@ type Props = {
   date: Date;
 };
 
-/**
- * @package
- */
+/** @package */
 export const Date: FC<Props> = ({ date }) => {
   const day = useDay(date);
   const monthShort = useMonthShort(date);
 
   return (
     <View style={styles.container}>
-      <Text type="bold" text={day} />
-      <Text type="small" text={monthShort} />
+      <Text fontWeight="bold" textAlign="center">
+        {day}
+      </Text>
+      <Text size="s" color="disabled" textAlign="center">
+        {monthShort}
+      </Text>
     </View>
   );
 };

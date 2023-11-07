@@ -7,8 +7,8 @@ import { FontSize, FontWeight, TextAlign, TextColor } from "./Text.types";
 
 type Props = {
   children: ReactNode;
-  color?: TextColor;
   size?: FontSize;
+  color?: TextColor;
   textAlign?: TextAlign;
   fontWeight?: FontWeight;
 };
