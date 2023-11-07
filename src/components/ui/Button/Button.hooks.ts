@@ -1,18 +1,29 @@
 import { useMemo } from "react";
+import { TextStyle } from "react-native";
 
-import { ButtonType } from "./Button";
-import { styles } from "./Button.styles";
+import { fontSize } from "@/styles/fontSize";
 
-/**
- * @package
- */
-export const useTextStyle = (type: ButtonType) => {
+import { Size } from "./Button.types";
+
+const useFontSizeStyle = (size: Size): number => {
   return useMemo(() => {
-    switch (type) {
-      case "medium":
-        return styles.medium;
-      case "large":
-        return styles.large;
+    switch (size) {
+      case "m":
+        return fontSize.m;
+      case "l":
+        return fontSize.l;
     }
-  }, [type]);
+  }, [size]);
+};
+
+/** @package */
+export const useTextStyle = (size: Size): TextStyle => {
+  const fontSize = useFontSizeStyle(size);
+
+  const textStyle = useMemo(() => {
+    return {
+      fontSize,
+    };
+  }, [size]);
+  return textStyle;
 };

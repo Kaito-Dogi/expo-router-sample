@@ -1,27 +1,26 @@
-import { FC } from "react";
+import { FC, ReactNode } from "react";
 import { Pressable, Text } from "react-native";
 
 import { useTextStyle } from "./Button.hooks";
 import { styles } from "./Button.styles";
-
-/**
- * @package
- */
-export type ButtonType = "medium" | "large";
+import { Size } from "./Button.types";
 
 type Props = {
   text: string;
-  type: ButtonType;
+  size: Size;
+  onClick: () => void;
+  icon?: ReactNode;
 };
 
 /**
  * @package
  */
-export const Button: FC<Props> = ({ text, type }) => {
-  const textStyle = useTextStyle(type);
+export const Button: FC<Props> = ({ icon, onClick, size, text }) => {
+  const textStyle = useTextStyle(size);
   return (
-    <Pressable style={styles.container}>
-      <Text style={textStyle}>{text}</Text>
+    <Pressable onPress={onClick} style={styles.container}>
+      {!!icon && icon}
+      <Text style={[textStyle, styles.text]}>{text}</Text>
     </Pressable>
   );
 };

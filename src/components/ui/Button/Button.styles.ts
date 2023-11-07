@@ -1,35 +1,20 @@
-import { StyleSheet, TextStyle } from "react-native";
+import { StyleSheet } from "react-native";
 
 import { colors } from "@/styles/colors";
 import { dimens } from "@/styles/dimens";
 
-import { ButtonType } from "./Button";
-
-const textStyles: {
-  [key in ButtonType]: TextStyle;
-} = {
-  medium: {
-    alignSelf: "stretch",
-    color: colors.onSurface,
-    fontSize: 14,
-  },
-  large: {
-    alignSelf: "stretch",
-    color: colors.onSurface,
-    fontSize: 18,
-  },
-};
-
-/**
- * @package
- */
+/** @package */
 export const styles = StyleSheet.create({
-  ...textStyles,
   container: {
+    flexDirection: "row",
     justifyContent: "center",
     alignItems: "center",
     alignSelf: "stretch",
+    gap: dimens.s,
     padding: dimens.s,
     backgroundColor: colors.primary,
+  },
+  text: {
+    alignSelf: "stretch",
   },
 });
