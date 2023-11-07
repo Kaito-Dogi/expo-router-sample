@@ -11,6 +11,7 @@
     "gen": "scaffdog generate"
   },
   "dependencies": {
+    "date-fns": "^2.30.0",
     "expo": "~49.0.15",
     "expo-router": "^2.0.10",
     "expo-status-bar": "~1.6.0",
