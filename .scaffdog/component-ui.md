@@ -13,7 +13,7 @@ questions:
 import { FC } from "react";
 import { View } from "react-native";
 
-import { styles } from "./styles";
+import { styles } from "./{{ inputs.name | pascal }}.styles";
 
 type Props = {};
 
