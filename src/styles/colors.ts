@@ -1,6 +1,7 @@
 export type Color =
   | "primary"
   | "onPrimary"
+  | "primaryContainer"
   | "background"
   | "onBackground"
   | "surface"
@@ -12,6 +13,7 @@ export const colors: {
 } = {
   primary: "#60dafb",
   onPrimary: "#222",
+  primaryContainer: "#dff8fe",
   background: "#f9f9f9",
   onBackground: "#222",
   surface: "#fff",

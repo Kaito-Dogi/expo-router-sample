@@ -9,6 +9,8 @@ import { FontWeight, TextAlign, TextColor } from "./Text.types";
 const useTextColor = (color: TextColor): `#${string}` => {
   return useMemo(() => {
     switch (color) {
+      case "primary":
+        return colors.primary;
       case "onSurface":
         return colors.onSurface;
       case "disabled":
