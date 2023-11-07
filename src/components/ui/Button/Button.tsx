@@ -12,9 +12,7 @@ type Props = {
   icon?: ReactNode;
 };
 
-/**
- * @package
- */
+/** @package */
 export const Button: FC<Props> = ({ icon, onClick, size, text }) => {
   const textStyle = useTextStyle(size);
   return (

@@ -3,9 +3,7 @@ import { StyleSheet } from "react-native";
 import { colors } from "@/styles/colors";
 import { dimens } from "@/styles/dimens";
 
-/**
- * @package
- */
+/** @package */
 export const styles = StyleSheet.create({
   container: {
     aspectRatio: 1,

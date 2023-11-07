@@ -31,9 +31,7 @@ const useTextSize = (size: FontSize): number => {
   }, [size]);
 };
 
-/**
- * @package
- */
+/** @package */
 export const useStyle = (
   color: TextColor,
   fontWeight: FontWeight,

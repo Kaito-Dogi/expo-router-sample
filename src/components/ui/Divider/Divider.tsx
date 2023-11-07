@@ -3,9 +3,7 @@ import { View } from "react-native";
 
 import { styles } from "./Divider.styles";
 
-/**
- * @package
- */
+/** @package */
 export const Divider: FC = () => {
   return <View style={styles.divider} />;
 };

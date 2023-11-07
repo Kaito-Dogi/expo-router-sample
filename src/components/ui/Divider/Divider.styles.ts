@@ -2,9 +2,7 @@ import { StyleSheet } from "react-native";
 
 import { colors } from "@/styles/colors";
 
-/**
- * @package
- */
+/** @package */
 export const styles = StyleSheet.create({
   divider: {
     alignSelf: "stretch",
