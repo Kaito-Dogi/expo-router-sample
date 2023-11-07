@@ -1,4 +1,4 @@
-type Dimen = "xs" | "s" | "m" | "l" | "xl";
+export type Dimen = "xs" | "s" | "m" | "l" | "xl";
 
 export const dimens: {
   [key in Dimen]: number;
