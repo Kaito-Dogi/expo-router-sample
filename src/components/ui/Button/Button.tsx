@@ -18,7 +18,9 @@ export const Button: FC<Props> = ({ icon, onClick, size = "m", text }) => {
   return (
     <Pressable onPress={onClick} style={styles.container}>
       {!!icon && icon}
-      <Text style={[textStyle, styles.text]}>{text}</Text>
+      <Text style={[textStyle, styles.text]} numberOfLines={1}>
+        {text}
+      </Text>
     </Pressable>
   );
 };

@@ -9,6 +9,7 @@ import { FontWeight, TextAlign, TextColor } from "./Text.types";
 
 type Props = {
   text: string;
+  numberOfLines?: number;
   size?: FontSize;
   color?: TextColor;
   textAlign?: TextAlign;
@@ -19,10 +20,15 @@ type Props = {
 export const Text: FC<Props> = ({
   color = "onSurface",
   fontWeight = "normal",
+  numberOfLines = undefined,
   size = "m",
   text,
   textAlign = "left",
 }) => {
   const style = useStyle(color, fontWeight, size, textAlign);
-  return <RNText style={[style, styles.text]}>{text}</RNText>;
+  return (
+    <RNText style={[style, styles.text]} numberOfLines={numberOfLines}>
+      {text}
+    </RNText>
+  );
 };

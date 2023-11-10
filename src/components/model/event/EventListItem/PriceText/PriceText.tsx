@@ -19,6 +19,7 @@ export const PriceText: FC<Props> = ({ price }) => {
         color="primary"
         textAlign="center"
         fontWeight="bold"
+        numberOfLines={1}
       />
     </View>
   );

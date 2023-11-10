@@ -15,7 +15,7 @@ export const IconText: FC<Props> = ({ icon, text }) => {
   return (
     <View style={styles.container}>
       {icon}
-      <Text text={text} color="disabled" fontWeight="bold" />
+      <Text text={text} color="disabled" fontWeight="bold" numberOfLines={1} />
     </View>
   );
 };

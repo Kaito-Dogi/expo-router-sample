@@ -18,8 +18,20 @@ export const Date: FC<Props> = ({ date }) => {
 
   return (
     <View style={styles.container}>
-      <Text text={day} size="s" fontWeight="bold" textAlign="center" />
-      <Text text={monthShort} size="xs" color="disabled" textAlign="center" />
+      <Text
+        text={day}
+        size="s"
+        fontWeight="bold"
+        textAlign="center"
+        numberOfLines={1}
+      />
+      <Text
+        text={monthShort}
+        size="xs"
+        color="disabled"
+        textAlign="center"
+        numberOfLines={1}
+      />
     </View>
   );
 };
