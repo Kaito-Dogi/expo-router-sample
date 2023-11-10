@@ -14,9 +14,12 @@ type Props = {
 export const PriceText: FC<Props> = ({ price }) => {
   return (
     <View style={styles.container}>
-      <Text color="primary" textAlign="center" fontWeight="bold">
-        {price === 0 ? "FREE" : `¥${price}`}
-      </Text>
+      <Text
+        text={price === 0 ? "FREE" : `¥${price}`}
+        color="primary"
+        textAlign="center"
+        fontWeight="bold"
+      />
     </View>
   );
 };
