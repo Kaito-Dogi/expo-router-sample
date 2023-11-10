@@ -10,7 +10,7 @@ export const styles = StyleSheet.create({
     justifyContent: "center",
     alignItems: "center",
     backgroundColor: colors.background,
-    borderRadius: dimens.s,
-    padding: dimens.xs,
+    borderRadius: dimens.xs,
+    padding: dimens.xxs,
   },
 });

@@ -6,16 +6,15 @@ import { dimens } from "@/styles/dimens";
 export const styles = StyleSheet.create({
   container: {
     position: "relative",
-    borderRadius: dimens.s,
   },
   image: {
     height: 96,
     aspectRatio: 1,
-    borderRadius: dimens.m,
+    borderRadius: dimens.s,
   },
   date: {
     position: "absolute",
-    top: dimens.s,
-    left: dimens.s,
+    top: dimens.xs,
+    left: dimens.xs,
   },
 });

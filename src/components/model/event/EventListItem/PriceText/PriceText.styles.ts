@@ -8,9 +8,9 @@ export const styles = StyleSheet.create({
   container: {
     justifyContent: "center",
     alignItems: "center",
-    width: 80,
-    borderRadius: dimens.s,
+    width: 72,
+    borderRadius: dimens.xs,
     backgroundColor: colors.primaryContainer,
-    paddingVertical: dimens.s,
+    paddingVertical: dimens.xs,
   },
 });
