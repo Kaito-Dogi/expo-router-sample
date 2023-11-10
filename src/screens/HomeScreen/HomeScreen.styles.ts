@@ -9,8 +9,7 @@ import { dimens } from "@/styles/dimens";
 export const styles = StyleSheet.create({
   container: {
     flex: 1,
-    gap: dimens.m,
     backgroundColor: colors.background,
-    padding: dimens.m,
+    paddingHorizontal: dimens.m,
   },
 });

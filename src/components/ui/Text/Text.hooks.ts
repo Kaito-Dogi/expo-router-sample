@@ -7,7 +7,7 @@ import { FontSize, fontSize } from "@/styles/fontSize";
 import { FontWeight, TextAlign, TextColor } from "./Text.types";
 
 const useTextColor = (color: TextColor): `#${string}` => {
-  return useMemo(() => {
+  const style = useMemo(() => {
     switch (color) {
       case "primary":
         return colors.primary;
@@ -17,10 +17,11 @@ const useTextColor = (color: TextColor): `#${string}` => {
         return colors.disabled;
     }
   }, [color]);
+  return style;
 };
 
 const useTextSize = (size: FontSize): number => {
-  return useMemo(() => {
+  const style = useMemo(() => {
     switch (size) {
       case "xs":
         return fontSize.xs;
@@ -34,6 +35,7 @@ const useTextSize = (size: FontSize): number => {
         return fontSize.xl;
     }
   }, [size]);
+  return style;
 };
 
 /** @package */

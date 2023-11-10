@@ -6,7 +6,7 @@ import { fontSize } from "@/styles/fontSize";
 import { Size } from "./Button.types";
 
 const useFontSizeStyle = (size: Size): number => {
-  return useMemo(() => {
+  const style = useMemo(() => {
     switch (size) {
       case "m":
         return fontSize.m;
@@ -14,6 +14,7 @@ const useFontSizeStyle = (size: Size): number => {
         return fontSize.l;
     }
   }, [size]);
+  return style;
 };
 
 /** @package */
