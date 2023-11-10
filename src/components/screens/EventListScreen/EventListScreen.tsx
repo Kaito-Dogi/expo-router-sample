@@ -2,7 +2,7 @@ import { router } from "expo-router";
 import { FC, useCallback } from "react";
 import { FlatList, View } from "react-native";
 
-import { EventListItem } from "@/components/model/event/EventListItem";
+import { EventListItem } from "@/components/models/event/EventListItem";
 import { Spacer } from "@/components/ui/Spacer";
 import { Text } from "@/components/ui/Text";
 import { mockEvents } from "@/mocks/events";

@@ -1,7 +1,7 @@
 import { FC, useCallback } from "react";
 import { Pressable, View } from "react-native";
 
-import { LocationIcon } from "@/components/icon/LocationIcon";
+import { LocationIcon } from "@/components/icons/LocationIcon";
 import { IconText } from "@/components/ui/IconText";
 import { Spacer } from "@/components/ui/Spacer";
 import { Text } from "@/components/ui/Text";

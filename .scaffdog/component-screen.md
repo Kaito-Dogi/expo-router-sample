@@ -1,6 +1,6 @@
 ---
-name: "screen"
-root: "src/screens/"
+name: "component-screen"
+root: "src/components/screens/"
 output: "./"
 ignore: []
 questions:

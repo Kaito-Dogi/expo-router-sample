@@ -1,7 +1,7 @@
 import { Tabs } from "expo-router";
 import { SafeAreaView } from "react-native";
 
-import { LocationIcon } from "@/components/icon/LocationIcon";
+import { LocationIcon } from "@/components/icons/LocationIcon";
 
 import { styles } from "./styles";
 
