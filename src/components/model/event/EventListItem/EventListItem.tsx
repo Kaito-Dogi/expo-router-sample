@@ -1,12 +1,13 @@
 import { FC, useCallback } from "react";
 import { Pressable, View } from "react-native";
 
+import { LocationIcon } from "@/components/icon/LocationIcon";
+import { IconText } from "@/components/ui/IconText";
 import { Spacer } from "@/components/ui/Spacer";
 import { Text } from "@/components/ui/Text";
 import { Event } from "@/models/Event";
 
 import { styles } from "./EventListItem.styles";
-import { LocationText } from "./LocationText";
 import { PriceText } from "./PriceText";
 import { SquareImage } from "./SquareImage";
 
@@ -25,12 +26,10 @@ export const EventListItem: FC<Props> = ({ event, onEventClick }) => {
     <Pressable style={styles.container} onPress={onPress}>
       <SquareImage imageUrl={event.imageUrl} date={event.date} />
       <View style={styles.textContainer}>
-        <Text size="m" color="onSurface" fontWeight="bold">
-          {event.name}
-        </Text>
+        <Text text={event.name} size="m" color="onSurface" fontWeight="bold" />
         <Spacer />
         <View style={styles.locationAndPriceContainer}>
-          <LocationText location={event.location} />
+          <IconText text={event.location} icon={<LocationIcon />} />
           <Spacer />
           <PriceText price={event.price} />
         </View>
