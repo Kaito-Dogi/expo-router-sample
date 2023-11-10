@@ -38,7 +38,8 @@ export const HomeScreen: FC = () => {
         }
         ItemSeparatorComponent={() => <Spacer height={"m"} />}
         contentContainerStyle={{
-          paddingVertical: dimens.xl,
+          paddingTop: dimens.xl,
+          paddingBottom: dimens.m,
         }}
       />
     </View>
