@@ -9,10 +9,10 @@ import { mockEvents } from "@/mocks/events";
 import { Event } from "@/models/Event";
 import { dimens } from "@/styles/dimens";
 
-import { styles } from "./HomeScreen.styles";
+import { styles } from "./EventListScreen.styles";
 
 /** @package */
-export const HomeScreen: FC = () => {
+export const EventListScreen: FC = () => {
   const onEventClick = useCallback((event: Event) => {
     router.push(`/events/${event.id}`);
   }, []);

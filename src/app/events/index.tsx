@@ -1,5 +1,5 @@
-import { HomeScreen } from "@/screens/HomeScreen";
+import { EventListScreen } from "@/screens/EventListScreen";
 
 export default function Page() {
-  return <HomeScreen />;
+  return <EventListScreen />;
 }
