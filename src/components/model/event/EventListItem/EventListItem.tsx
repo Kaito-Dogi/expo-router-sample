@@ -1,5 +1,5 @@
-import { FC } from "react";
-import { View } from "react-native";
+import { FC, useCallback } from "react";
+import { Pressable, View } from "react-native";
 
 import { Spacer } from "@/components/ui/Spacer";
 import { Text } from "@/components/ui/Text";
@@ -12,12 +12,17 @@ import { SquareImage } from "./SquareImage";
 
 type Props = {
   event: Event;
+  onEventClick: (event: Event) => void;
 };
 
 /** @package */
-export const EventListItem: FC<Props> = ({ event }) => {
+export const EventListItem: FC<Props> = ({ event, onEventClick }) => {
+  const onPress = useCallback(() => {
+    onEventClick(event);
+  }, [event, onEventClick]);
+
   return (
-    <View style={styles.container}>
+    <Pressable style={styles.container} onPress={onPress}>
       <SquareImage imageUrl={event.imageUrl} date={event.date} />
       <View style={styles.textContainer}>
         <Text size="m" color="onSurface" fontWeight="bold">
@@ -30,6 +35,6 @@ export const EventListItem: FC<Props> = ({ event }) => {
           <PriceText price={event.price} />
         </View>
       </View>
-    </View>
+    </Pressable>
   );
 };
