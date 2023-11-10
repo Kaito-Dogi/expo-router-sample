@@ -9,7 +9,7 @@ export const styles = StyleSheet.create({
     aspectRatio: 1,
     justifyContent: "center",
     alignItems: "center",
-    backgroundColor: colors.background,
+    backgroundColor: colors.surface,
     borderRadius: dimens.xs,
     padding: dimens.xxs,
   },
