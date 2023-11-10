@@ -11,15 +11,15 @@ questions:
 
 ```tsx
 import { FC } from "react";
-import { SafeAreaView } from "react-native";
+import { View } from "react-native";
 
-import { styles } from "./styles";
+import { styles } from "./{{ inputs.name | pascal }}Screen.styles";
 
 type Props = {};
 
 /** @package */
 export const {{ inputs.name | pascal }}Screen: FC<Props> = ({}) => {
-  return <SafeAreaView style={styles.container}></SafeAreaView>;
+  return <View style={styles.container}></View>;
 };
 ```
 
@@ -34,7 +34,7 @@ import { colors } from "@/styles/colors";
 export const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: colors.BACKGROUND,
+    backgroundColor: colors.background,
     justifyContent: "center",
   },
 });
