@@ -8,7 +8,11 @@ import { styles } from "./styles";
 export default function Layout() {
   return (
     <SafeAreaView style={styles.container}>
-      <Tabs screenOptions={{ headerShown: false }} initialRouteName="events">
+      {/**
+       * initialRouteName が機能しないので index で /events にリダイレクトしている
+       * https://github.com/expo/router/issues/428
+       */}
+      <Tabs screenOptions={{ headerShown: false }} initialRouteName="/events">
         <Tabs.Screen
           name="events"
           options={{
@@ -23,6 +27,16 @@ export default function Layout() {
             href: "tickets",
             title: "チケット",
             tabBarIcon: () => <LocationIcon />,
+          }}
+        />
+        {/**
+         * リダイレクト用の index は Bottom Tabs で表示しない
+         * https://docs.expo.dev/router/advanced/tabs/#hiding-a-tab
+         */}
+        <Tabs.Screen
+          name="index"
+          options={{
+            href: null,
           }}
         />
       </Tabs>
