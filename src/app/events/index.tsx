@@ -1,6 +1,7 @@
 import { Link } from "expo-router";
 
 import { Text } from "@/components/ui/Text";
+import { HomeScreen } from "@/screens/HomeScreen";
 
 export default function Page() {
   return (
@@ -8,7 +9,7 @@ export default function Page() {
       <Text text="Events Page" />
       <Link
         href={{
-          pathname: "/events/[id]",
+          pathname: "events/[id]",
           params: { id: 1 },
         }}
       >
@@ -16,12 +17,13 @@ export default function Page() {
       </Link>
       <Link
         href={{
-          pathname: "/events/[id]",
+          pathname: "events/[id]",
           params: { id: 2 },
         }}
       >
         詳細ページ2へ
       </Link>
+      <HomeScreen />
     </>
   );
 }

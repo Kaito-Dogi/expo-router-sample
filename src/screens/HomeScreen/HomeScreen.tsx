@@ -1,19 +1,35 @@
-import { FC } from "react";
-import { SafeAreaView, Text } from "react-native";
+import { FC, useCallback } from "react";
+import { View } from "react-native";
 
-import { styles } from "./styles";
+import { EventListItem } from "@/components/model/event/EventListItem";
+import { Text } from "@/components/ui/Text";
+import { mockEvents } from "@/mocks/events";
+import { Event } from "@/models/Event";
 
-type Props = {
-  text: string;
-};
+import { styles } from "./HomeScreen.styles";
 
-/**
- * @package
- */
-export const HomeScreen: FC<Props> = ({ text }) => {
+/** @package */
+export const HomeScreen: FC = () => {
+  const onEventClick = useCallback((event: Event) => {
+    console.log("event: ", event.name);
+  }, []);
   return (
-    <SafeAreaView style={styles.container}>
-      <Text>{text}</Text>
-    </SafeAreaView>
+    <View style={styles.container}>
+      <Text
+        text={"おすすめのイベント"}
+        size="xl"
+        fontWeight="bold"
+        numberOfLines={1}
+      />
+      {mockEvents.map((event) => {
+        return (
+          <EventListItem
+            event={event}
+            onEventClick={onEventClick}
+            key={event.id}
+          />
+        );
+      })}
+    </View>
   );
 };

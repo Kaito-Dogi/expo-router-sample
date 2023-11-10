@@ -1,6 +1,7 @@
 import { StyleSheet } from "react-native";
 
 import { colors } from "@/styles/colors";
+import { dimens } from "@/styles/dimens";
 
 /**
  * @package
@@ -8,8 +9,8 @@ import { colors } from "@/styles/colors";
 export const styles = StyleSheet.create({
   container: {
     flex: 1,
+    gap: dimens.m,
     backgroundColor: colors.background,
-    alignItems: "center",
-    justifyContent: "center",
+    padding: dimens.m,
   },
 });
