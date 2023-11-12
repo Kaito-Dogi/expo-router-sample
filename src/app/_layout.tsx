@@ -1,16 +1,29 @@
+import { setBackgroundColorAsync } from "expo-navigation-bar";
 import { Tabs } from "expo-router";
-import { SafeAreaView } from "react-native";
+import { useEffect } from "react";
+import { Platform, SafeAreaView } from "react-native";
 
 import { LocationIcon } from "@/components/icons/LocationIcon";
+import { colors } from "@/styles/colors";
 
 import { styles } from "./styles";
 
 export default function Layout() {
+  useEffect(() => {
+    /**
+     * Expo で Android の Native Navigation Bar を透過させることはできないので、
+     * Bottom Tabs と同じ色に設定している
+     * - https://github.com/expo/expo/issues/16036
+     * - https://docs.expo.dev/versions/latest/sdk/navigation-bar/#navigationbarsetbackgroundcolorasynccolor
+     */
+    Platform.OS === "android" && setBackgroundColorAsync(colors.surface);
+  }, [colors.surface]);
+
   return (
     <SafeAreaView style={styles.container}>
       {/**
        * initialRouteName が機能しないので index で /events にリダイレクトしている
-       * https://github.com/expo/router/issues/428
+       * - https://github.com/expo/router/issues/428
        */}
       <Tabs screenOptions={{ headerShown: false }} initialRouteName="/events">
         <Tabs.Screen
@@ -31,7 +44,7 @@ export default function Layout() {
         />
         {/**
          * リダイレクト用の index は Bottom Tabs で表示しない
-         * https://docs.expo.dev/router/advanced/tabs/#hiding-a-tab
+         * - https://docs.expo.dev/router/advanced/tabs/#hiding-a-tab
          */}
         <Tabs.Screen
           name="index"

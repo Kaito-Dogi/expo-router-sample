@@ -22,8 +22,8 @@ export default function Layout() {
       <JsStack.Screen name="index" />
       {/**
        * モーダルは Android で動作しないため JS Stack Navigator で独自に実装する必要がある
-       * https://github.com/expo/router/issues/640
-       * https://docs.expo.dev/router/advanced/stack/#javascript-stack-with-react-navigationstack
+       * - https://github.com/expo/router/issues/640
+       * - https://docs.expo.dev/router/advanced/stack/#javascript-stack-with-react-navigationstack
        */}
       <JsStack.Screen
         name="[id]"
