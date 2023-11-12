@@ -11,6 +11,8 @@
     "gen": "scaffdog generate"
   },
   "dependencies": {
+    "@react-navigation/native": "^6.1.9",
+    "@react-navigation/stack": "^6.3.20",
     "date-fns": "^2.30.0",
     "expo": "~49.0.15",
     "expo-router": "^2.0.10",
