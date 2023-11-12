@@ -1,13 +1,6 @@
-export type Color =
-  | "primary"
-  | "onPrimary"
-  | "primaryContainer"
-  | "background"
-  | "onBackground"
-  | "surface"
-  | "onSurface"
-  | "disabled";
+import { Color } from "./Color";
 
+/** @package */
 export const colors: {
   [key in Color]: `#${string}`;
 } = {

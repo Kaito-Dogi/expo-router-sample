@@ -1,5 +1,6 @@
-export type Dimen = "xxs" | "xs" | "s" | "m" | "l" | "xl";
+import { Dimen } from "./Dimen";
 
+/** @package */
 export const dimens: {
   [key in Dimen]: number;
 } = {
