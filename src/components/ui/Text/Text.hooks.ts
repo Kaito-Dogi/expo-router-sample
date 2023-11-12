@@ -1,52 +1,20 @@
 import { useMemo } from "react";
 import { TextStyle } from "react-native";
 
-import { colors } from "@/styles/colors";
-import { FontSize, fontSize } from "@/styles/fontSize";
+import { useColors } from "@/styles/colors";
+import { Type, useTypes } from "@/styles/types";
 
 import { FontWeight, TextAlign, TextColor } from "./Text.types";
-
-const useTextColor = (color: TextColor): `#${string}` => {
-  const style = useMemo(() => {
-    switch (color) {
-      case "primary":
-        return colors.primary;
-      case "onSurface":
-        return colors.onSurface;
-      case "disabled":
-        return colors.disabled;
-    }
-  }, [color]);
-  return style;
-};
-
-const useTextSize = (size: FontSize): number => {
-  const style = useMemo(() => {
-    switch (size) {
-      case "xs":
-        return fontSize.xs;
-      case "s":
-        return fontSize.s;
-      case "m":
-        return fontSize.m;
-      case "l":
-        return fontSize.l;
-      case "xl":
-        return fontSize.xl;
-    }
-  }, [size]);
-  return style;
-};
 
 /** @package */
 export const useStyle = (
   color: TextColor,
   fontWeight: FontWeight,
-  size: FontSize,
-  textAlign: TextAlign
+  size: Type,
+  textAlign: TextAlign,
 ): TextStyle => {
-  const textColor = useTextColor(color);
-  const fontSize = useTextSize(size);
+  const textColor = useColors(color);
+  const fontSize = useTypes(size);
 
   const style = useMemo(() => {
     return {
