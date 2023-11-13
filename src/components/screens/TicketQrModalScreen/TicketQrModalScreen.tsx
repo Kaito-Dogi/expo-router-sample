@@ -1,6 +1,7 @@
 import { FC } from "react";
 import { Image, View } from "react-native";
 
+import { Text } from "@/src/components/ui/Text";
 import { Ticket } from "@/src/models/Ticket";
 
 import { styles } from "./TicketQrModalScreen.styles";
@@ -16,6 +17,7 @@ export const TicketQrModalScreen: FC<Props> = ({ id }) => {
 
   return (
     <View style={styles.container}>
+      <Text text="ようこそ！" size="xl" fontWeight="bold" textAlign="center" />
       <Image
         style={styles.image}
         source={require("@/assets/expo-router-sample-qr.png")}
