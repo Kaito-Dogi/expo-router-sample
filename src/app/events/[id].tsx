@@ -1,8 +1,10 @@
 import { useLocalSearchParams } from "expo-router";
 
-import { Text } from "@/components/ui/Text";
+import { EventDetailScreen } from "@/components/screens/EventDetailScreen";
 
 export default function Page() {
   const { id } = useLocalSearchParams();
-  return <Text text={`Event Detail Page: ${id}`} />;
+  if (typeof id !== "string") return null;
+
+  return <EventDetailScreen id={id} />;
 }
