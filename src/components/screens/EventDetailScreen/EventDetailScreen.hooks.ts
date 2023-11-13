@@ -2,15 +2,15 @@ import { format } from "date-fns";
 import { useMemo } from "react";
 
 /** @package */
-export const useDay = (date: Date): string => {
+export const useDate = (datetime: Date): string => {
   return useMemo(() => {
-    return format(date, "yyyy/MM/dd");
-  }, [date]);
+    return format(datetime, "yyyy/MM/dd");
+  }, [datetime]);
 };
 
 /** @package */
-export const useTime = (date: Date): string => {
+export const useTime = (datetime: Date): string => {
   return useMemo(() => {
-    return format(date, `HH:mm`);
-  }, [date]);
+    return format(datetime, `HH:mm`);
+  }, [datetime]);
 };

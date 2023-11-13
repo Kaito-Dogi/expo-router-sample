@@ -6,7 +6,7 @@ export const mockEvents: Event[] = [
     name: "LT&交流会 #1 〜モダンフロント編〜【オフライン開催 in 渋谷】",
     imageUrl:
       "https://media.connpass.com/thumbs/d5/99/d59979eee2dd9dea2af4553813a8308c.png",
-    date: new Date("2023-09-10T14:00:00"),
+    datetime: new Date("2023-09-10T14:00:00"),
     location: "渋谷幸和4階",
     price: 500,
     organizer: "Coopello",
@@ -18,7 +18,7 @@ export const mockEvents: Event[] = [
     name: "フロントエンドカンファレンス沖縄2023前夜祭リジェクトコン(オフライン)",
     imageUrl:
       "https://media.connpass.com/thumbs/08/aa/08aadf993553bb6e4d59469dc3dc5ce3.png",
-    date: new Date("2023-11-17T19:30:00"),
+    datetime: new Date("2023-11-17T19:30:00"),
     location: "CBcloud株式会社",
     price: 0,
     organizer: "フロントエンドカンファレンス沖縄",
@@ -30,7 +30,7 @@ export const mockEvents: Event[] = [
     name: "フロントエンドカンファレンス沖縄2023",
     imageUrl:
       "https://media.connpass.com/thumbs/5d/e1/5de11dec661940a6c7d524778ca0e210.png",
-    date: new Date("2023-11-18T10:00:00"),
+    datetime: new Date("2023-11-18T10:00:00"),
     location: "ZORKS沖縄",
     price: 0,
     organizer: "フロントエンドカンファレンス沖縄",
@@ -42,7 +42,7 @@ export const mockEvents: Event[] = [
     name: "フロントエンドカンファレンス沖縄2023 懇親会",
     imageUrl:
       "https://media.connpass.com/thumbs/dd/b1/ddb12784325ee1c236b625bdcdd2c971.png",
-    date: new Date("2023-11-18T18:00:00"),
+    datetime: new Date("2023-11-18T18:00:00"),
     location: "ぱいかじ国際通り店",
     price: 4000,
     organizer: "フロントエンドカンファレンス沖縄",
@@ -54,7 +54,7 @@ export const mockEvents: Event[] = [
     name: "LT&交流会 #2 〜モダンフロント編〜【オフライン開催 in 渋谷】",
     imageUrl:
       "https://media.connpass.com/thumbs/ac/4e/ac4edf091f9af9addce14ecb000f8b20.png",
-    date: new Date("2023-12-09T14:00:00"),
+    datetime: new Date("2023-12-09T14:00:00"),
     location: "ノーガード渋谷",
     price: 500,
     organizer: "Coopello",

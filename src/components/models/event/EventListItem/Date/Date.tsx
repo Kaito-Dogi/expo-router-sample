@@ -8,13 +8,13 @@ import { useDay, useMonthShort } from "./Date.hooks";
 import { styles } from "./Date.styles";
 
 type Props = {
-  date: Event["date"];
+  datetime: Event["datetime"];
 };
 
 /** @package */
-export const Date: FC<Props> = ({ date }) => {
-  const day = useDay(date);
-  const monthShort = useMonthShort(date);
+export const Date: FC<Props> = ({ datetime }) => {
+  const day = useDay(datetime);
+  const monthShort = useMonthShort(datetime);
 
   return (
     <View style={styles.container}>

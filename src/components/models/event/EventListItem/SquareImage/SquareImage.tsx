@@ -8,16 +8,16 @@ import { styles } from "./SquareImage.styles";
 
 type Props = {
   imageUrl: Event["imageUrl"];
-  date: Event["date"];
+  datetime: Event["datetime"];
 };
 
 /** @package */
-export const SquareImage: FC<Props> = ({ date, imageUrl }) => {
+export const SquareImage: FC<Props> = ({ datetime, imageUrl }) => {
   return (
     <View style={styles.container}>
       <Image source={{ uri: imageUrl }} style={styles.image} />
       <View style={styles.date}>
-        <Date date={date} />
+        <Date datetime={datetime} />
       </View>
     </View>
   );

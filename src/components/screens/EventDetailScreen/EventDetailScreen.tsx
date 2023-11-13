@@ -15,21 +15,21 @@ import { Text } from "@/components/ui/Text";
 import { mockEvents } from "@/mocks/events";
 import { Event } from "@/models/Event";
 
-import { useDay, useTime } from "./EventDetailScreen.hooks";
+import { useDate, useTime } from "./EventDetailScreen.hooks";
 import { styles } from "./EventDetailScreen.styles";
 
 type Props = {
   id: Event["id"];
 };
 
-const defaultDate = new Date("1970-01-01T00:00:00");
+const defaultDatetime = new Date("1970-01-01T00:00:00");
 
 /** @package */
 export const EventDetailScreen: FC<Props> = ({ id }) => {
   const event = mockEvents.find((event) => event.id === id);
 
-  const day = useDay(event?.date ?? defaultDate);
-  const time = useTime(event?.date ?? defaultDate);
+  const day = useDate(event?.datetime ?? defaultDatetime);
+  const time = useTime(event?.datetime ?? defaultDatetime);
 
   if (!event) {
     console.log(id);
