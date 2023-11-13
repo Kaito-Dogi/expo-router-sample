@@ -1,4 +1,4 @@
-import { EventListScreen } from "@/components/screens/EventListScreen";
+import { EventListScreen } from "@src/components/screens/EventListScreen";
 
 export default function Page() {
   return <EventListScreen />;

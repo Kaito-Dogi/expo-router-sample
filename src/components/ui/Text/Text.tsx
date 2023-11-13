@@ -1,7 +1,6 @@
+import { Type } from "@src/styles/types";
 import { FC } from "react";
 import { Text as RNText } from "react-native";
-
-import { Type } from "@/styles/types";
 
 import { useStyle } from "./Text.hooks";
 import { styles } from "./Text.styles";

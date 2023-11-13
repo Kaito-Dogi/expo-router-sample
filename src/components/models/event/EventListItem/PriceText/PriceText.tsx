@@ -1,8 +1,7 @@
+import { Text } from "@src/components/ui/Text";
+import { Event } from "@src/models/Event";
 import { FC } from "react";
 import { View } from "react-native";
-
-import { Text } from "@/components/ui/Text";
-import { Event } from "@/models/Event";
 
 import { styles } from "./PriceText.styles";
 

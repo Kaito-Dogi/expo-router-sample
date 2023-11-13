@@ -1,6 +1,5 @@
+import { EventDetailScreen } from "@src/components/screens/EventDetailScreen";
 import { useLocalSearchParams } from "expo-router";
-
-import { EventDetailScreen } from "@/components/screens/EventDetailScreen";
 
 export default function Page() {
   const { id } = useLocalSearchParams();

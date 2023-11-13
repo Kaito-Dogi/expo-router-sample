@@ -28,7 +28,7 @@ export const {{ inputs.name | pascal }}Screen: FC<Props> = ({}) => {
 ```tsx
 import { StyleSheet } from "react-native";
 
-import { colors } from "@/styles/colors";
+import { colors } from "@src/styles/colors";
 
 /** @package */
 export const styles = StyleSheet.create({

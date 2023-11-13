@@ -1,19 +1,18 @@
-import { FC } from "react";
-import { Image, ScrollView, View } from "react-native";
-
 import {
   CalendarIcon,
   ClockIcon,
   LocationIcon,
   PersonIcon,
-} from "@/components/icons";
-import { Button } from "@/components/ui/Button";
-import { Divider } from "@/components/ui/Divider";
-import { IconText } from "@/components/ui/IconText";
-import { Spacer } from "@/components/ui/Spacer";
-import { Text } from "@/components/ui/Text";
-import { mockEvents } from "@/mocks/events";
-import { Event } from "@/models/Event";
+} from "@src/components/icons";
+import { Button } from "@src/components/ui/Button";
+import { Divider } from "@src/components/ui/Divider";
+import { IconText } from "@src/components/ui/IconText";
+import { Spacer } from "@src/components/ui/Spacer";
+import { Text } from "@src/components/ui/Text";
+import { mockEvents } from "@src/mocks/events";
+import { Event } from "@src/models/Event";
+import { FC } from "react";
+import { Image, ScrollView, View } from "react-native";
 
 import { useDate, useTime } from "./EventDetailScreen.hooks";
 import { styles } from "./EventDetailScreen.styles";

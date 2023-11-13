@@ -1,4 +1,4 @@
-import { Color } from "@/styles/colors";
+import { Color } from "@src/styles/colors";
 
 /** @package */
 export type TextColor = Extract<

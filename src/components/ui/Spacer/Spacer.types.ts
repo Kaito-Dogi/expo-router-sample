@@ -1,4 +1,4 @@
-import { Dimen } from "@/styles/dimens";
+import { Dimen } from "@src/styles/dimens";
 
 /** @package */
 export type Size = Dimen | "auto";

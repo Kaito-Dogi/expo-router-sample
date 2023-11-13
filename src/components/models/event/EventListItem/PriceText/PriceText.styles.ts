@@ -1,7 +1,6 @@
+import { colors } from "@src/styles/colors";
+import { dimens } from "@src/styles/dimens";
 import { StyleSheet } from "react-native";
-
-import { colors } from "@/styles/colors";
-import { dimens } from "@/styles/dimens";
 
 /** @package */
 export const styles = StyleSheet.create({

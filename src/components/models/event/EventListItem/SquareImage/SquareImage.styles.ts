@@ -1,6 +1,5 @@
+import { dimens } from "@src/styles/dimens";
 import { StyleSheet } from "react-native";
-
-import { dimens } from "@/styles/dimens";
 
 /** @package */
 export const styles = StyleSheet.create({

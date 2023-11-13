@@ -1,7 +1,6 @@
+import { Text } from "@src/components/ui/Text";
 import { FC, ReactNode } from "react";
 import { View } from "react-native";
-
-import { Text } from "@/components/ui/Text";
 
 import { styles } from "./IconText.styles";
 
