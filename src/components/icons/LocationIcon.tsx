@@ -1,6 +1,7 @@
 import { Ionicons } from "@expo/vector-icons";
-import { colors } from "@src/styles/colors";
 import { FC } from "react";
+
+import { colors } from "@/src/styles/colors";
 
 /** @package */
 export const LocationIcon: FC = () => {

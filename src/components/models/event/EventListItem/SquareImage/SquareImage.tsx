@@ -1,6 +1,7 @@
-import { Event } from "@src/models/Event";
 import { FC } from "react";
 import { Image, View } from "react-native";
+
+import { Event } from "@/src/models/Event";
 
 import { Date } from "../Date";
 import { styles } from "./SquareImage.styles";

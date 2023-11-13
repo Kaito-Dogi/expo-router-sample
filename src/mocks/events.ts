@@ -1,4 +1,4 @@
-import { Event } from "@src/models/Event";
+import { Event } from "@/src/models/Event";
 
 export const mockEvents: Event[] = [
   {

@@ -1,7 +1,10 @@
-import { QrModalScreen } from "@src/components/screens/QrModalScreen";
 import { useLocalSearchParams } from "expo-router";
+
+import { TicketQrModalScreen } from "@/src/components/screens/TicketQrModalScreen";
 
 export default function Page() {
   const { id } = useLocalSearchParams();
-  return <QrModalScreen id={id} />;
+  if (typeof id !== "string") return null;
+
+  return <TicketQrModalScreen id={id} />;
 }

@@ -1,6 +1,7 @@
-import { dimens } from "@src/styles/dimens";
 import { useMemo } from "react";
 import { ViewStyle } from "react-native";
+
+import { dimens } from "@/src/styles/dimens";
 
 import { Size } from "./Spacer.types";
 

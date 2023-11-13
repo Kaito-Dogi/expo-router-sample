@@ -17,8 +17,8 @@
       }
     ],
     "paths": {
-      "@src/*": ["./src/*"],
-      "@assets/*": ["./assets/*"]
+      "@/src/*": ["./src/*"],
+      "@/assets/*": ["./assets/*"]
     }
   },
   "include": ["**/*.ts", "**/*.tsx"],

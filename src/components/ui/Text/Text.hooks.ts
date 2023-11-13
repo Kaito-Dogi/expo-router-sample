@@ -1,7 +1,8 @@
-import { useColors } from "@src/styles/colors";
-import { Type, useTypes } from "@src/styles/types";
 import { useMemo } from "react";
 import { TextStyle } from "react-native";
+
+import { useColors } from "@/src/styles/colors";
+import { Type, useTypes } from "@/src/styles/types";
 
 import { FontWeight, TextAlign, TextColor } from "./Text.types";
 

@@ -1,7 +1,8 @@
-import { Text } from "@src/components/ui/Text";
-import { Event } from "@src/models/Event";
 import { FC } from "react";
 import { View } from "react-native";
+
+import { Text } from "@/src/components/ui/Text";
+import { Event } from "@/src/models/Event";
 
 import { useDay, useMonthShort } from "./Date.hooks";
 import { styles } from "./Date.styles";

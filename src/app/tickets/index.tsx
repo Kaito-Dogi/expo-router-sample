@@ -1,6 +1,7 @@
-import { Text } from "@src/components/ui/Text";
 import { Link } from "expo-router";
-@src/
+
+import { Text } from "@/src/components/ui/Text";
+
 export default function Page() {
   return (
     <>

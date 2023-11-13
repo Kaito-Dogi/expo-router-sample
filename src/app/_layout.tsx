@@ -1,9 +1,10 @@
-import { HomeIcon, TicketIcon } from "@src/components/icons";
-import { colors } from "@src/styles/colors";
 import { setBackgroundColorAsync } from "expo-navigation-bar";
 import { Tabs } from "expo-router";
 import { useEffect } from "react";
 import { Platform, SafeAreaView } from "react-native";
+
+import { HomeIcon, TicketIcon } from "@/src/components/icons";
+import { colors } from "@/src/styles/colors";
 
 import { styles } from "./styles";
 

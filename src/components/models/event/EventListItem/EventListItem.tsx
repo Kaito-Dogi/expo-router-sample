@@ -1,10 +1,11 @@
-import { LocationIcon } from "@src/components/icons";
-import { IconText } from "@src/components/ui/IconText";
-import { Spacer } from "@src/components/ui/Spacer";
-import { Text } from "@src/components/ui/Text";
-import { Event } from "@src/models/Event";
 import { FC, useCallback } from "react";
 import { Pressable, View } from "react-native";
+
+import { LocationIcon } from "@/src/components/icons";
+import { IconText } from "@/src/components/ui/IconText";
+import { Spacer } from "@/src/components/ui/Spacer";
+import { Text } from "@/src/components/ui/Text";
+import { Event } from "@/src/models/Event";
 
 import { styles } from "./EventListItem.styles";
 import { PriceText } from "./PriceText";
