@@ -1,7 +1,7 @@
 import { FC } from "react";
 import { Text as RNText } from "react-native";
 
-import { FontSize } from "@/styles/fontSize";
+import { Type } from "@/styles/types";
 
 import { useStyle } from "./Text.hooks";
 import { styles } from "./Text.styles";
@@ -10,7 +10,7 @@ import { FontWeight, TextAlign, TextColor } from "./Text.types";
 type Props = {
   text: string;
   numberOfLines?: number;
-  size?: FontSize;
+  size?: Type;
   color?: TextColor;
   textAlign?: TextAlign;
   fontWeight?: FontWeight;

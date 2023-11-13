@@ -1,14 +1,14 @@
 import { StyleSheet } from "react-native";
 
-import { colors } from "@/styles/colors/colors";
+import { colors } from "@/styles/colors";
 import { dimens } from "@/styles/dimens";
 
 /** @package */
 export const styles = StyleSheet.create({
   container: {
+    flex: 1,
     flexDirection: "row",
     alignItems: "center",
-    alignSelf: "stretch",
     gap: dimens.s,
     padding: dimens.s,
     borderRadius: dimens.m,
@@ -16,11 +16,10 @@ export const styles = StyleSheet.create({
   },
   textContainer: {
     flex: 1,
-    alignSelf: "stretch",
     paddingTop: dimens.xs,
-    paddingBottom: dimens.xxs,
   },
   locationAndPriceContainer: {
+    flex: 1,
     flexDirection: "row",
     alignItems: "center",
   },

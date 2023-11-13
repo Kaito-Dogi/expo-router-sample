@@ -1,4 +1,4 @@
-import { FontSize } from "@/styles/fontSize";
+import { Type } from "@/styles/types";
 
 /** @package */
-export type Size = Extract<FontSize, "m" | "l">;
+export type Size = Extract<Type, "m" | "l">;

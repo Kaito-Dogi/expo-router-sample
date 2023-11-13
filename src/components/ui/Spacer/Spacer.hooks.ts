@@ -32,11 +32,13 @@ export const useStyle = (width: Size, height: Size): ViewStyle => {
   const widthValue = useSizeStyle(width);
   const heightValue = useSizeStyle(height);
 
-  const style = useMemo(() => {
+  const style: ViewStyle = useMemo(() => {
     return {
+      flex: widthValue === "auto" && heightValue === "auto" ? 1 : 0,
+      alignSelf:
+        widthValue === "auto" && heightValue === "auto" ? "stretch" : "auto",
       width: widthValue,
       height: heightValue,
-      flex: widthValue === "auto" && heightValue === "auto" ? 1 : 0,
     };
   }, [widthValue, heightValue]);
   return style;

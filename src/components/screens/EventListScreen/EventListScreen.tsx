@@ -28,15 +28,15 @@ export const EventListScreen: FC = () => {
         ListHeaderComponent={
           <>
             <Text
-              text={"おすすめのイベント"}
+              text="おすすめのイベント"
               size="xl"
               fontWeight="bold"
               numberOfLines={1}
             />
-            <Spacer height={"m"} />
+            <Spacer height="m" />
           </>
         }
-        ItemSeparatorComponent={() => <Spacer height={"m"} />}
+        ItemSeparatorComponent={() => <Spacer height="m" />}
         contentContainerStyle={{
           padding: dimens.m,
         }}

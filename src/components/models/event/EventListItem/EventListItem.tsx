@@ -36,7 +36,6 @@ export const EventListItem: FC<Props> = ({ event, onEventClick }) => {
         <Spacer />
         <View style={styles.locationAndPriceContainer}>
           <IconText text={event.location} icon={<LocationIcon />} />
-          <Spacer />
           <PriceText price={event.price} />
         </View>
       </View>
