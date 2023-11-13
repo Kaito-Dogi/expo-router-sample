@@ -15,15 +15,22 @@ import { Text } from "@/components/ui/Text";
 import { mockEvents } from "@/mocks/events";
 import { Event } from "@/models/Event";
 
+import { useDay, useTime } from "./EventDetailScreen.hooks";
 import { styles } from "./EventDetailScreen.styles";
 
 type Props = {
   id: Event["id"];
 };
 
+const defaultDate = new Date("1970-01-01T00:00:00");
+
 /** @package */
 export const EventDetailScreen: FC<Props> = ({ id }) => {
   const event = mockEvents.find((event) => event.id === id);
+
+  const day = useDay(event?.date ?? defaultDate);
+  const time = useTime(event?.date ?? defaultDate);
+
   if (!event) {
     console.log(id);
     return (
@@ -37,8 +44,7 @@ export const EventDetailScreen: FC<Props> = ({ id }) => {
     );
   }
 
-  const { date, description, imageUrl, location, name, organizer, price } =
-    event;
+  const { description, imageUrl, location, name, organizer, price } = event;
 
   return (
     <View style={styles.container}>
@@ -54,11 +60,11 @@ export const EventDetailScreen: FC<Props> = ({ id }) => {
         <View style={styles.textRow}>
           <View style={styles.textBox}>
             <IconText text="日付" icon={<CalendarIcon />} />
-            <Text text={`${date}`} fontWeight="bold" numberOfLines={1} />
+            <Text text={day} fontWeight="bold" numberOfLines={1} />
           </View>
           <View style={styles.textBox}>
             <IconText text="時間" icon={<ClockIcon />} />
-            <Text text={`${date}`} fontWeight="bold" numberOfLines={1} />
+            <Text text={time} fontWeight="bold" numberOfLines={1} />
           </View>
         </View>
         <View style={styles.textRow}>
