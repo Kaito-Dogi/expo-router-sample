@@ -1,5 +1,5 @@
 ---
-name: "icon"
+name: "component-icon"
 root: "src/components/icons/"
 output: "./"
 ignore: []
@@ -15,15 +15,16 @@ import { {{ inputs.sets | pascal }} } from "@expo/vector-icons";
 import { FC } from "react";
 
 type Props = {
-  color?: string;
+  color: `#${string}`;
   outline?: boolean;
 };
 
+/** @package */
 export const {{ inputs.name | pascal }}Icon: FC<Props> = ({ color, outline = false }) => {
   return outline ? (
-    <{{ inputs.sets | pascal }} name="" color={color} size={24} />
+    <{{ inputs.sets | pascal }} name="" color={color} size={} />
   ) : (
-    <{{ inputs.sets | pascal }} name="" color={color} size={24} />
+    <{{ inputs.sets | pascal }} name="" color={color} size={} />
   );
 };
 ```

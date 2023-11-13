@@ -4,6 +4,6 @@ import { FC } from "react";
 import { colors } from "@/styles/colors";
 
 /** @package */
-export const LocationIcon: FC = () => {
-  return <Ionicons name="location-sharp" color={colors.disabled} size={16} />;
+export const PersonIcon: FC = () => {
+  return <Ionicons name="person-sharp" color={colors.disabled} size={16} />;
 };

@@ -4,6 +4,6 @@ import { FC } from "react";
 import { colors } from "@/styles/colors";
 
 /** @package */
-export const LocationIcon: FC = () => {
-  return <Ionicons name="location-sharp" color={colors.disabled} size={16} />;
+export const ClockIcon: FC = () => {
+  return <Ionicons name="time-sharp" color={colors.disabled} size={16} />;
 };

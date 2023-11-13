@@ -3,7 +3,7 @@ import { Tabs } from "expo-router";
 import { useEffect } from "react";
 import { Platform, SafeAreaView } from "react-native";
 
-import { LocationIcon } from "@/components/icons/LocationIcon";
+import { HomeIcon, TicketIcon } from "@/components/icons";
 import { colors } from "@/styles/colors";
 
 import { styles } from "./styles";
@@ -25,13 +25,21 @@ export default function Layout() {
        * initialRouteName が機能しないので index で /events にリダイレクトしている
        * - https://github.com/expo/router/issues/428
        */}
-      <Tabs screenOptions={{ headerShown: false }} initialRouteName="/events">
+      <Tabs
+        screenOptions={{
+          headerShown: false,
+          tabBarActiveTintColor: colors.primary,
+        }}
+        initialRouteName="/events"
+      >
         <Tabs.Screen
           name="events"
           options={{
             href: "events",
             title: "イベント",
-            tabBarIcon: () => <LocationIcon />,
+            tabBarIcon: ({ color, focused }) => (
+              <HomeIcon color={color as `#${string}`} outline={!focused} />
+            ),
           }}
         />
         <Tabs.Screen
@@ -39,7 +47,9 @@ export default function Layout() {
           options={{
             href: "tickets",
             title: "チケット",
-            tabBarIcon: () => <LocationIcon />,
+            tabBarIcon: ({ color, focused }) => (
+              <TicketIcon color={color as `#${string}`} outline={!focused} />
+            ),
           }}
         />
         {/**

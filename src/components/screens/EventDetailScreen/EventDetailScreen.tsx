@@ -1,7 +1,12 @@
 import { FC } from "react";
 import { Image, ScrollView, View } from "react-native";
 
-import { LocationIcon } from "@/components/icons/LocationIcon";
+import {
+  CalendarIcon,
+  ClockIcon,
+  LocationIcon,
+  PersonIcon,
+} from "@/components/icons";
 import { Button } from "@/components/ui/Button";
 import { Divider } from "@/components/ui/Divider";
 import { IconText } from "@/components/ui/IconText";
@@ -48,11 +53,11 @@ export const EventDetailScreen: FC<Props> = ({ id }) => {
         <Spacer />
         <View style={styles.textRow}>
           <View style={styles.textBox}>
-            <IconText text="日付" icon={<LocationIcon />} />
+            <IconText text="日付" icon={<CalendarIcon />} />
             <Text text={`${date}`} fontWeight="bold" numberOfLines={1} />
           </View>
           <View style={styles.textBox}>
-            <IconText text="時間" icon={<LocationIcon />} />
+            <IconText text="時間" icon={<ClockIcon />} />
             <Text text={`${date}`} fontWeight="bold" numberOfLines={1} />
           </View>
         </View>
@@ -62,7 +67,7 @@ export const EventDetailScreen: FC<Props> = ({ id }) => {
             <Text text={location} fontWeight="bold" numberOfLines={1} />
           </View>
           <View style={styles.textBox}>
-            <IconText text="主催" icon={<LocationIcon />} />
+            <IconText text="主催" icon={<PersonIcon />} />
             <Text text={organizer} fontWeight="bold" numberOfLines={1} />
           </View>
         </View>
