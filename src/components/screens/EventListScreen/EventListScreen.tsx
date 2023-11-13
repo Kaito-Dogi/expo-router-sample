@@ -13,9 +13,12 @@ import { styles } from "./EventListScreen.styles";
 
 /** @package */
 export const EventListScreen: FC = () => {
-  const onEventClick = useCallback((event: Event) => {
-    router.push(`/events/${event.id}`);
-  }, []);
+  const onEventClick = useCallback(
+    (event: Event) => {
+      router.push(`/events/${event.id}`);
+    },
+    [router]
+  );
 
   return (
     <View style={styles.container}>
