@@ -24,6 +24,7 @@ export default function Layout() {
       <JsStack.Screen
         name="index"
         options={{
+          headerShown: false,
           title: "チケット",
         }}
       />
