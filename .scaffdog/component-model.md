@@ -1,6 +1,6 @@
 ---
 name: "component-model"
-root: "src/components/model/"
+root: "src/components/models/"
 output: "./"
 ignore: []
 questions:
