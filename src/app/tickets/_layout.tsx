@@ -7,6 +7,8 @@ import {
 } from "@react-navigation/stack";
 import { withLayoutContext } from "expo-router";
 
+import { colors } from "@/src/styles/colors";
+
 const { Navigator } = createStackNavigator();
 
 const JsStack = withLayoutContext<
@@ -18,8 +20,13 @@ const JsStack = withLayoutContext<
 
 export default function Layout() {
   return (
-    <JsStack screenOptions={{ headerShown: false }}>
-      <JsStack.Screen name="index" />
+    <JsStack screenOptions={{ headerTintColor: colors.primary }}>
+      <JsStack.Screen
+        name="index"
+        options={{
+          title: "チケット",
+        }}
+      />
       {/**
        * モーダルは Android で動作しないため JS Stack Navigator で独自に実装する必要がある
        * - https://github.com/expo/router/issues/640
@@ -29,6 +36,7 @@ export default function Layout() {
         name="[id]"
         options={{
           ...TransitionPresets.ModalPresentationIOS,
+          title: "QR コード",
           presentation: "modal",
         }}
       />
