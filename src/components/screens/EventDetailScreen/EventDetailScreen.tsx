@@ -87,9 +87,9 @@ export const EventDetailScreen: FC<Props> = ({ id }) => {
           />
         </View>
         <Button
-          text="購入する"
+          text="参加する"
           onClick={() => {
-            console.log("購入する");
+            console.log("参加する");
           }}
           size="l"
         />

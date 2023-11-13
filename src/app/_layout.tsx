@@ -62,6 +62,12 @@ export default function Layout() {
             href: null,
           }}
         />
+        <Tabs.Screen
+          name="[...unmatched]"
+          options={{
+            href: null,
+          }}
+        />
       </Tabs>
     </SafeAreaView>
   );
