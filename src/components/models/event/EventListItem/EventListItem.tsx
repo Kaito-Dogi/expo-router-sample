@@ -25,7 +25,7 @@ export const EventListItem: FC<Props> = ({ event, onEventClick }) => {
   return (
     <Pressable style={styles.container} onPress={onPress}>
       <SquareImage imageUrl={event.imageUrl} datetime={event.datetime} />
-      <View style={styles.textContainer}>
+      <View style={styles.infoContainer}>
         <Text
           text={event.name}
           size="m"
@@ -36,6 +36,7 @@ export const EventListItem: FC<Props> = ({ event, onEventClick }) => {
         <Spacer />
         <View style={styles.locationAndPriceContainer}>
           <IconText text={event.location} icon={<LocationIcon />} />
+          <Spacer />
           <PriceText price={event.price} />
         </View>
       </View>

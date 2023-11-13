@@ -7,20 +7,25 @@ import {
   LocationIcon,
   PersonIcon,
 } from "@/src/components/icons";
-import { Event } from "@/src/models/Event";
 
 import { useDate, useTime } from "./EventInfo.hooks";
 import { styles } from "./EventInfoBoxes.styles";
 import { InfoBoxRow } from "./InfoBoxRow";
 
 type Props = {
-  event: Event;
+  datetime: Date;
+  location: string;
+  organizer: string;
 };
 
 /** @package */
-export const EventInfoBoxes: FC<Props> = ({ event }) => {
-  const date = useDate(event.datetime);
-  const time = useTime(event.datetime);
+export const EventInfoBoxes: FC<Props> = ({
+  datetime,
+  location,
+  organizer,
+}) => {
+  const date = useDate(datetime);
+  const time = useTime(datetime);
 
   return (
     <View style={styles.container}>
@@ -41,12 +46,12 @@ export const EventInfoBoxes: FC<Props> = ({ event }) => {
       <InfoBoxRow
         infoList={[
           {
-            text: event.location,
+            text: location,
             label: "場所",
             icon: <LocationIcon />,
           },
           {
-            text: event.organizer,
+            text: organizer,
             label: "主催",
             icon: <PersonIcon />,
           },

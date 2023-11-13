@@ -4,7 +4,6 @@ import { Text as RNText } from "react-native";
 import { Type } from "@/src/styles/types";
 
 import { useStyle } from "./Text.hooks";
-import { styles } from "./Text.styles";
 import { FontWeight, TextAlign, TextColor } from "./Text.types";
 
 type Props = {
@@ -27,7 +26,7 @@ export const Text: FC<Props> = ({
 }) => {
   const style = useStyle(color, fontWeight, size, textAlign);
   return (
-    <RNText style={[style, styles.text]} numberOfLines={numberOfLines}>
+    <RNText style={style} numberOfLines={numberOfLines}>
       {text}
     </RNText>
   );

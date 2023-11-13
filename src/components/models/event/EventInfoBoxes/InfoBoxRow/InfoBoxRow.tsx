@@ -14,7 +14,7 @@ export const InfoBoxRow: FC<Props> = ({ infoList }) => {
   return (
     <View style={styles.container}>
       {infoList.map((info) => {
-        return <InfoBox info={info} />;
+        return <InfoBox info={info} key={info.label} />;
       })}
     </View>
   );

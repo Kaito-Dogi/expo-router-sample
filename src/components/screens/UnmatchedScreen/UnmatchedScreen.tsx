@@ -1,9 +1,10 @@
 import { router } from "expo-router";
 import { FC, useCallback } from "react";
-import { Pressable, View } from "react-native";
+import { View } from "react-native";
 
 import { Text } from "@/src/components/ui/Text";
 
+import { Button } from "../../ui/Button";
 import { styles } from "./UnmatchedScreen.styles";
 
 /** @package */
@@ -15,16 +16,9 @@ export const UnmatchedScreen: FC = () => {
   return (
     <View style={styles.container}>
       <Text text="存在しない画面です ><" color="disabled" textAlign="center" />
-      <Pressable onPress={onClick} style={styles.button}>
-        <Text
-          text="ホームに戻る"
-          size="m"
-          color="onPrimary"
-          fontWeight="bold"
-          textAlign="center"
-          numberOfLines={1}
-        />
-      </Pressable>
+      <View>
+        <Button text="ホームに戻る" onClick={onClick} size="m" />
+      </View>
     </View>
   );
 };

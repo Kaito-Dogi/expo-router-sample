@@ -14,12 +14,11 @@ export const styles = StyleSheet.create({
     borderRadius: dimens.m,
     backgroundColor: colors.surface,
   },
-  textContainer: {
+  infoContainer: {
     flex: 1,
     paddingTop: dimens.xs,
   },
   locationAndPriceContainer: {
-    flex: 1,
     flexDirection: "row",
     alignItems: "center",
   },

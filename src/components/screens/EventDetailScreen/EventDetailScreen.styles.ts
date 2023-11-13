@@ -13,17 +13,16 @@ export const styles = StyleSheet.create({
     backgroundColor: colors.background,
   },
   contentContainer: {
-    gap: dimens.s,
+    gap: dimens.l,
     backgroundColor: colors.background,
-    padding: dimens.m,
-    paddingBottom: dimens.l,
+    padding: dimens.l,
   },
   image: {
-    alignSelf: "stretch",
+    width: "100%",
     aspectRatio: 1.618,
     borderRadius: dimens.m,
   },
-  bottomRow: {
+  priceAndButtonRow: {
     flexDirection: "row",
     justifyContent: "space-evenly",
     alignItems: "center",
@@ -38,9 +37,12 @@ export const styles = StyleSheet.create({
     shadowOpacity: 0.2,
     shadowRadius: 5,
   },
-  priceTextContainer: {
+  priceContainer: {
     flex: 1,
     justifyContent: "center",
+  },
+  buttonContainer: {
+    flex: 1,
   },
   emptyView: {
     flex: 1,

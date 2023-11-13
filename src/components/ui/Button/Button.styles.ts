@@ -6,12 +6,13 @@ import { dimens } from "@/src/styles/dimens";
 /** @package */
 export const styles = StyleSheet.create({
   container: {
-    flex: 1,
+    alignSelf: "stretch",
     flexDirection: "row",
     justifyContent: "center",
     alignItems: "center",
     gap: dimens.s,
-    padding: dimens.s,
+    paddingVertical: dimens.s,
+    paddingHorizontal: dimens.l,
     borderRadius: dimens.s,
     backgroundColor: colors.primary,
   },
