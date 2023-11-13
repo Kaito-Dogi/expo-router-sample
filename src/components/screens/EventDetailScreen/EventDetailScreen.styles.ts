@@ -23,15 +23,6 @@ export const styles = StyleSheet.create({
     aspectRatio: 1.618,
     borderRadius: dimens.m,
   },
-  textRow: {
-    flexDirection: "row",
-    alignItems: "center",
-    gap: dimens.m,
-  },
-  textBox: {
-    flex: 1,
-    gap: dimens.xs,
-  },
   bottomRow: {
     flexDirection: "row",
     justifyContent: "space-evenly",

@@ -1,30 +1,23 @@
 import { FC } from "react";
 import { Image, ScrollView, View } from "react-native";
 
+import { EventInfoBoxes } from "@/src/components/models/event/EventInfoBoxes";
 import { Button } from "@/src/components/ui/Button";
 import { Divider } from "@/src/components/ui/Divider";
-import { IconText } from "@/src/components/ui/IconText";
 import { Spacer } from "@/src/components/ui/Spacer";
 import { Text } from "@/src/components/ui/Text";
 import { mockEvents } from "@/src/mocks/events";
 import { Event } from "@/src/models/Event";
 
-import { CalendarIcon, ClockIcon, LocationIcon, PersonIcon } from "../../icons";
-import { useDate, useTime } from "./EventDetailScreen.hooks";
 import { styles } from "./EventDetailScreen.styles";
 
 type Props = {
   id: Event["id"];
 };
 
-const defaultDatetime = new Date("1970-01-01T00:00:00");
-
 /** @package */
 export const EventDetailScreen: FC<Props> = ({ id }) => {
   const event = mockEvents.find((event) => event.id === id);
-
-  const day = useDate(event?.datetime ?? defaultDatetime);
-  const time = useTime(event?.datetime ?? defaultDatetime);
 
   if (!event) {
     console.log(id);
@@ -39,7 +32,7 @@ export const EventDetailScreen: FC<Props> = ({ id }) => {
     );
   }
 
-  const { description, imageUrl, location, name, organizer, price } = event;
+  const { description, imageUrl, name, price } = event;
 
   return (
     <View style={styles.container}>
@@ -52,26 +45,7 @@ export const EventDetailScreen: FC<Props> = ({ id }) => {
         <Spacer />
         <Divider />
         <Spacer />
-        <View style={styles.textRow}>
-          <View style={styles.textBox}>
-            <IconText text="日付" icon={<CalendarIcon />} />
-            <Text text={day} fontWeight="bold" numberOfLines={1} />
-          </View>
-          <View style={styles.textBox}>
-            <IconText text="時間" icon={<ClockIcon />} />
-            <Text text={time} fontWeight="bold" numberOfLines={1} />
-          </View>
-        </View>
-        <View style={styles.textRow}>
-          <View style={styles.textBox}>
-            <IconText text="場所" icon={<LocationIcon />} />
-            <Text text={location} fontWeight="bold" numberOfLines={1} />
-          </View>
-          <View style={styles.textBox}>
-            <IconText text="主催" icon={<PersonIcon />} />
-            <Text text={organizer} fontWeight="bold" numberOfLines={1} />
-          </View>
-        </View>
+        <EventInfoBoxes event={event} />
         <Spacer />
         <Divider />
         <Spacer />
