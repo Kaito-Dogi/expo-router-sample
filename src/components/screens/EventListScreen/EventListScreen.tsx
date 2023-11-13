@@ -17,7 +17,7 @@ export const EventListScreen: FC = () => {
     (event: Event) => {
       router.push(`/events/${event.id}`);
     },
-    [router]
+    [router],
   );
 
   return (

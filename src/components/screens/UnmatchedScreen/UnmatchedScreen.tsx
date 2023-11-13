@@ -2,9 +2,9 @@ import { router } from "expo-router";
 import { FC, useCallback } from "react";
 import { View } from "react-native";
 
+import { Button } from "@/src/components/ui/Button";
 import { Text } from "@/src/components/ui/Text";
 
-import { Button } from "../../ui/Button";
 import { styles } from "./UnmatchedScreen.styles";
 
 /** @package */

@@ -3,12 +3,12 @@ import { FC, useCallback, useState } from "react";
 import { Image, View } from "react-native";
 
 import { EventInfoBoxes } from "@/src/components/models/event/EventInfoBoxes";
+import { Button } from "@/src/components/ui/Button";
+import { Divider } from "@/src/components/ui/Divider";
+import { Spacer } from "@/src/components/ui/Spacer";
+import { Text } from "@/src/components/ui/Text";
 import { mockEvents } from "@/src/mocks/events";
 
-import { Button } from "../../ui/Button";
-import { Divider } from "../../ui/Divider";
-import { Spacer } from "../../ui/Spacer";
-import { Text } from "../../ui/Text";
 import { styles } from "./TicketsScreen.styles";
 
 /** @package */
