@@ -3,7 +3,7 @@ import { Tabs } from "expo-router";
 import { useEffect } from "react";
 import { Platform, SafeAreaView } from "react-native";
 
-import { HomeIcon, TicketIcon } from "@/src/components/icons";
+import { PeopleIcon, TicketIcon } from "@/src/components/icons";
 import { colors } from "@/src/styles/colors";
 
 import { styles } from "./styles";
@@ -38,7 +38,7 @@ export default function Layout() {
             href: "events",
             title: "イベント",
             tabBarIcon: ({ color, focused }) => (
-              <HomeIcon color={color as `#${string}`} outline={!focused} />
+              <PeopleIcon color={color as `#${string}`} outline={!focused} />
             ),
           }}
         />
