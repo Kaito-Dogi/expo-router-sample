@@ -4,7 +4,7 @@ import { TicketQrModalScreen } from "@/src/components/screens/TicketQrModalScree
 
 export default function Page() {
   const { id } = useLocalSearchParams();
-  if (typeof id !== "string") return <Redirect href="/[...unmatched]" />;
+  if (typeof id !== "string") return <Redirect href="/404" />;
 
   return <TicketQrModalScreen id={id} />;
 }

@@ -24,6 +24,9 @@
     "web": {
       "favicon": "./assets/favicon.png"
     },
-    "scheme": "expo-router-sample"
+    "scheme": "expo-router-sample",
+    "experiments": {
+      "typedRoutes": true
+    }
   }
 }

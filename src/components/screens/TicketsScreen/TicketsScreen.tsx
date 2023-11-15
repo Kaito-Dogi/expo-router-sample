@@ -17,7 +17,7 @@ export const TicketsScreen: FC = () => {
   const event = mockEvents.find((event) => event.id === "5");
 
   // TODO: 表示しているチケットの id を保持
-  const [ticketId] = useState(event?.id);
+  const [ticketId] = useState(event?.id ?? "");
 
   const onClick = useCallback(() => {
     router.push({
@@ -26,7 +26,7 @@ export const TicketsScreen: FC = () => {
     });
   }, [router, ticketId]);
 
-  if (!event) return <Redirect href="/[...unmatched]" />;
+  if (!event) return <Redirect href="/404" />;
 
   return (
     <SafeAreaView style={styles.container}>
