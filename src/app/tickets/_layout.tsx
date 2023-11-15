@@ -21,13 +21,7 @@ const JsStack = withLayoutContext<
 export default function Layout() {
   return (
     <JsStack screenOptions={{ headerTintColor: colors.primary }}>
-      <JsStack.Screen
-        name="index"
-        options={{
-          headerShown: false,
-          title: "チケット",
-        }}
-      />
+      <JsStack.Screen name="index" options={{ headerShown: false }} />
       {/**
        * モーダルは Android で動作しないため JS Stack Navigator で独自に実装する必要がある
        * - https://github.com/expo/router/issues/640
@@ -38,6 +32,7 @@ export default function Layout() {
         options={{
           ...TransitionPresets.ModalPresentationIOS,
           title: "QR コード",
+          headerBackTitle: "チケット",
           presentation: "modal",
         }}
       />
