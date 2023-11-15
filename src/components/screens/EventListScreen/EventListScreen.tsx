@@ -1,6 +1,6 @@
 import { router } from "expo-router";
 import { FC, useCallback } from "react";
-import { FlatList, View } from "react-native";
+import { FlatList, SafeAreaView } from "react-native";
 
 import { EventListItem } from "@/src/components/models/event/EventListItem";
 import { Spacer } from "@/src/components/ui/Spacer";
@@ -21,7 +21,7 @@ export const EventListScreen: FC = () => {
   );
 
   return (
-    <View style={styles.container}>
+    <SafeAreaView style={styles.container}>
       <FlatList<Event>
         data={mockEvents}
         renderItem={({ item }) => (
@@ -44,6 +44,6 @@ export const EventListScreen: FC = () => {
           padding: dimens.m,
         }}
       />
-    </View>
+    </SafeAreaView>
   );
 };

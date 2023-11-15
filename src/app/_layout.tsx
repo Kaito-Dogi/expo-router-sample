@@ -1,12 +1,10 @@
 import { setBackgroundColorAsync } from "expo-navigation-bar";
 import { Tabs } from "expo-router";
 import { useEffect } from "react";
-import { Platform, SafeAreaView } from "react-native";
+import { Platform } from "react-native";
 
 import { PeopleIcon, TicketIcon } from "@/src/components/icons";
 import { colors } from "@/src/styles/colors";
-
-import { styles } from "./styles";
 
 export default function Layout() {
   useEffect(() => {
@@ -20,55 +18,53 @@ export default function Layout() {
   }, [colors.surface]);
 
   return (
-    <SafeAreaView style={styles.container}>
-      {/**
+    <Tabs
+      screenOptions={{
+        headerShown: false,
+        tabBarActiveTintColor: colors.primary,
+      }}
+      /**
        * initialRouteName が機能しないので index で /events にリダイレクトしている
        * - https://github.com/expo/router/issues/428
-       */}
-      <Tabs
-        screenOptions={{
-          headerShown: false,
-          tabBarActiveTintColor: colors.primary,
+       */
+      initialRouteName="/events"
+    >
+      <Tabs.Screen
+        name="events"
+        options={{
+          href: "events",
+          title: "イベント",
+          tabBarIcon: ({ color, focused }) => (
+            <PeopleIcon color={color as `#${string}`} outline={!focused} />
+          ),
         }}
-        initialRouteName="/events"
-      >
-        <Tabs.Screen
-          name="events"
-          options={{
-            href: "events",
-            title: "イベント",
-            tabBarIcon: ({ color, focused }) => (
-              <PeopleIcon color={color as `#${string}`} outline={!focused} />
-            ),
-          }}
-        />
-        <Tabs.Screen
-          name="tickets"
-          options={{
-            href: "tickets",
-            title: "チケット",
-            tabBarIcon: ({ color, focused }) => (
-              <TicketIcon color={color as `#${string}`} outline={!focused} />
-            ),
-          }}
-        />
-        {/**
-         * リダイレクト用の index は Bottom Tabs で表示しない
-         * - https://docs.expo.dev/router/advanced/tabs/#hiding-a-tab
-         */}
-        <Tabs.Screen
-          name="index"
-          options={{
-            href: null,
-          }}
-        />
-        <Tabs.Screen
-          name="[...unmatched]"
-          options={{
-            href: null,
-          }}
-        />
-      </Tabs>
-    </SafeAreaView>
+      />
+      <Tabs.Screen
+        name="tickets"
+        options={{
+          href: "tickets",
+          title: "チケット",
+          tabBarIcon: ({ color, focused }) => (
+            <TicketIcon color={color as `#${string}`} outline={!focused} />
+          ),
+        }}
+      />
+      {/**
+       * リダイレクト用の index は Bottom Tabs で表示しない
+       * - https://docs.expo.dev/router/advanced/tabs/#hiding-a-tab
+       */}
+      <Tabs.Screen
+        name="index"
+        options={{
+          href: null,
+        }}
+      />
+      <Tabs.Screen
+        name="[...unmatched]"
+        options={{
+          href: null,
+        }}
+      />
+    </Tabs>
   );
 }
